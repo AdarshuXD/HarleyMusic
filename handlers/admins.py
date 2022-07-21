@@ -20,8 +20,8 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
 
 BUTTON = [
     [
-        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_GROUP}"),
-        InlineKeyboardButton(text="🗑️Close", callback_data="close_"),
+        InlineKeyboardButton(text="𝗦𝘂𝗽𝗽𝗼𝗿𝘁🥀", url=f"https://t.me/{SUPPORT_GROUP}"),
+        InlineKeyboardButton(text="🗑️𝗖𝗹𝗼𝘀𝗲", callback_data="close_"),
     ],
 ]
 
@@ -33,7 +33,7 @@ ACTV_CALLS = []
 async def pause(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)   
     await message.reply_text(
-        f"ᴏᴋᴋ, sᴛʀᴇᴀᴍ ᴘᴀᴜsᴇᴅ ʙʏ {message.from_user.mention} 🥀\n\n✦ /resume :- ʀᴇsᴜᴍᴇ ᴘᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ!"
+        f"𝐇𝐚𝐫𝐥𝐞𝐲 , 𝐒𝐭𝐫𝐞𝐚𝐦 𝐏𝐚𝐮𝐬𝐞𝐝 𝐛𝐲 {message.from_user.mention} 𝐁𝐚𝐛𝐲🥀"
     )
     await message.delete()
 
@@ -44,7 +44,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
     await message.reply_text(
-        f"ᴏᴋᴋ, ʀᴇsᴜᴍᴇᴅ ᴘᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ ʙʏ {message.from_user.mention} 💫.\n\n✦ /pause :- ᴘᴀᴜsᴇ ᴘʟᴀʏʙᴀᴄᴋ!!"
+        f"𝐇𝐚𝐫𝐥𝐞𝐲 , 𝐒𝐭𝐫𝐞𝐚𝐦 𝐑𝐞𝐬𝐮𝐦𝐞 𝐛𝐲  {message.from_user.mention} 💫𝐁𝐚𝐛𝐲🥀"
     )
     await message.delete()
 
@@ -60,7 +60,7 @@ async def stop(_, message: Message):
 
     await callsmusic.pytgcalls.leave_group_call(message.chat.id)   
     await message.reply_text(
-        f"ᴏᴋᴋ, sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ ʙʏ {message.from_user.mention} \n ɴᴏᴡ ʟᴇᴀᴠɪɴɢ ᴠᴄ ʙʏᴇ ʙʏᴇ!👋🏻"
+        f"𝐇𝐚𝐫𝐥𝐞𝐲 , 𝐒𝐭𝐫𝐞𝐚𝐦 𝐄𝐧𝐝 𝐛𝐲 {message.from_user.mention} 𝐁𝐚𝐛𝐲🥀"
     )
     await message.delete()
     
@@ -76,7 +76,7 @@ async def skip(_, message: Message):
     if int(chat_id) not in ACTV_CALLS:
         
         await message.reply_text(
-            "ᴡᴛғ, ᴘʟᴀʏ ᴛʜᴇ sᴏɴɢ ғɪʀsᴛ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ sᴋɪᴘ ᴛᴀᴛ🙄!",
+            "𝐇𝐮𝐡 😏, 𝐏𝐥𝐚𝐲 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠  𝐟𝐢𝐫𝐬𝐭 𝐟𝐨𝐫 𝐒𝐤𝐢𝐩 𝐁𝐚𝐛𝐲🥀!",
             reply_markup=InlineKeyboardMarkup(BUTTON)
         )
         await message.delete()
@@ -95,6 +95,6 @@ async def skip(_, message: Message):
                 ),
             )   
     await message.reply_text(
-        f"ʜᴜʜ ᴏᴋᴋ, ᴍᴏᴠᴇᴅ ᴛᴏ ᴛʜᴇ ɴᴇxᴛ sᴏɴɢ!\nsᴛʀᴇᴀᴍ sᴋɪᴘ ʙʏ {message.from_user.mention}🥀"
+        f"𝐇𝐚𝐫𝐥𝐞𝐲, 𝐒𝐨𝐧𝐠 𝐒𝐤𝐢𝐩𝐩𝐞𝐝 𝐛𝐲  {message.from_user.mention}𝐁𝐚𝐛𝐲🥀"
     )
     await message.delete()
