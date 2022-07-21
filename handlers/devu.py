@@ -39,7 +39,7 @@ def callback_query(Client, callback: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(button2)
         )
     elif callback.data == "repo_k":
-        callback.answer('Source Code Of DevuMusic By @ShiningOff', show_alert=True)                
+        callback.answer('Source Code Of DevuMusic By @ShiningOff', show_alert=False)                
         callback.edit_message_text(
             t5.format(callback.from_user.mention, BOT_NAME),
             reply_markup=InlineKeyboardMarkup(button3)
