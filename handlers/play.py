@@ -109,7 +109,7 @@ async def play(_, message: Message):
     await message.delete()
     usrid = message.from_user.mention
 
-    lel = await message.reply("🔍")
+    lel = await message.reply("🕺")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -117,7 +117,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "SilentMusic01"
+        user.first_name = "HarleyXAssistant"
     usar = user
     wew = usar.id
     try:
@@ -129,19 +129,19 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b><i>sʜʜ, ɪ ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ғɪʀsᴛ ᴛᴏ ᴘʟᴀʏ sᴏɴɢs🙋‍♀️🥀</i></b>")
+                        "<b><i>𝐁𝐚𝐛𝐲 𝐦𝐚𝐤𝐞 𝐦𝐞 𝐀𝐝𝐦𝐢𝐧 𝐟𝐢𝐫𝐬𝐭 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲 𝐦𝐮𝐬𝐢𝐜 🙋‍♀️🥀</i></b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "sɪʟᴇɴᴛ-ᴍᴜsɪᴄ's ᴀssɪsᴛᴀɴᴛ ᴊᴏɪɴ ᴛʜᴇ ᴄʜᴀᴛ ᴡᴏᴡ🧚‍♀️🥀")
+                        message.chat.id, "𝐇𝐚𝐫𝐥𝐞𝐲 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐢𝐬 𝐣𝐨𝐢𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐛𝐚𝐛𝐲🧚‍♀️🥀")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b><i>ᴜɴᴀʙʟᴇ ᴛᴏ ᴘʟᴀʏ sᴏɴɢs😕, ᴍᴀᴋᴇ sᴜʀᴇ ᴀssɪsᴛᴀɴᴛ ɪᴢ ɴᴏᴛ ʙᴀɴɴᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ɴᴅ ᴛʀʏ ᴀɢᴀɪɴ🤷‍♀️</i></b>")
+                        f"<b><i>𝐔𝐧𝐚𝐛𝐥𝐞 𝐭𝐨 𝐩𝐥𝐚𝐲 𝐛𝐚𝐛𝐲😕, 𝐌𝐚𝐤𝐞 𝐬𝐮𝐫𝐞 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐢𝐬 𝐧𝐨𝐭 𝐛𝐚𝐧 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩🤷‍♀️</i></b>")
     
     try:
         await USER.get_chat(chid)
@@ -160,12 +160,12 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 360) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**ɢɪᴠᴇɴ ǫᴜᴀʀʏ ɪᴢ ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴛᴀᴛ ᴀʀᴇɴ'ᴛ ᴀʟʟᴏᴡ ᴛᴏ ᴘʟᴀʏ ᴅᴜᴇ ᴛᴏ ʜᴀᴠᴇʏ ᴜsᴀɢᴇ😕🤷‍♀️**"
+                f"**𝐒𝐨𝐫𝐫𝐲 𝐆𝐢𝐯𝐞𝐧 𝐐𝐮𝐞𝐫𝐲 𝐢𝐬 𝐧𝐨 𝐥𝐨𝐧𝐠𝐞𝐫 𝐭𝐡𝐚𝐧 {DURATION_LIMIT} 𝐒𝐨 𝐀𝐫𝐞𝐧'𝐭 𝐚𝐥𝐥𝐨𝐰 𝐭𝐨 𝐩𝐥𝐚𝐲 𝐝𝐮𝐞 𝐭𝐨 𝐡𝐞𝐚𝐯𝐲 𝐮𝐬𝐚𝐠𝐞😕🤷‍♀️**"
             )
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/9350788513346feef5087.jpg"
+        thumb_name = "https://te.legra.ph/file/3f22c82379ea73b4a7967.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -174,11 +174,11 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="ᴛᴇᴀᴍ-sɪʟᴇɴᴛ🥀",
-                            url=f"https://t.me/SILENT_DEVS"),
+                            text="Enjoy🥀",
+                            url=f"https://t.me/"),
                     InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs👾",
-                            url=f"https://t.me/SILENT_BOTS"),
+                            text="Update👾",
+                            url=f"https://t.me/"),
                ],
                [
                    InlineKeyboardButton(text="Close Menu", callback_data="close_"),                   
@@ -218,11 +218,11 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="ᴛᴇᴀᴍ-sɪʟᴇɴᴛ🥀",
+                            text="Enjoy🥀",
                             url=f"https://t.me/SILENT_DEVS"),
                     InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs👾",
-                            url=f"https://t.me/SILENT_BOTS"),
+                            text="Update👾",
+                            url=f"https://t.me/"),
                ],
                [
                    InlineKeyboardButton(text="Close Menu", callback_data="close_"),                   
@@ -232,18 +232,18 @@ async def play(_, message: Message):
     
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/9350788513346feef5087.jpg"
+            thumb_name = "https://te.legra.ph/file/3f22c82379ea73b4a7967.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                            text="ᴛᴇᴀᴍ-sɪʟᴇɴᴛ🥀",
-                            url=f"https://t.me/SILENT_DEVS"),
+                            text="Enjoy🥀",
+                            url=f"https://t.me/"),
                     InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs👾",
-                            url=f"https://t.me/SILENT_BOTS"),
+                            text="Update👾",
+                            url=f"https://t.me/"),
                ],
                [
                    InlineKeyboardButton(text="Close Menu", callback_data="close_"),                   
@@ -253,7 +253,7 @@ async def play(_, message: Message):
     
         if (dur / 360) > DURATION_LIMIT:
             await lel.edit(
-                f"**ɢɪᴠᴇɴ ǫᴜᴀʀʏ ɪᴢ ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴛᴀᴛ ᴀʀᴇɴ'ᴛ ᴀʟʟᴏᴡ ᴛᴏ ᴘʟᴀʏ ᴅᴜᴇ ᴛᴏ ʜᴀᴠᴇʏ ᴜsᴀɢᴇ😕🤷‍♀️**"
+                f"**𝐒𝐨𝐫𝐫𝐲 𝐆𝐢𝐯𝐞𝐧 𝐐𝐮𝐞𝐫𝐲 𝐢𝐬 𝐧𝐨 𝐥𝐨𝐧𝐠𝐞𝐫 𝐭𝐡𝐚𝐧 {DURATION_LIMIT} 𝐒𝐨 𝐀𝐫𝐞𝐧'𝐭 𝐚𝐥𝐥𝐨𝐰 𝐭𝐨 𝐩𝐥𝐚𝐲 𝐝𝐮𝐞 𝐭𝐨 𝐡𝐞𝐚𝐯𝐲 𝐮𝐬𝐚𝐠𝐞😕🤷‍♀️**"
             )
             return
         requested_by = message.from_user.first_name
@@ -262,7 +262,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "ᴜsᴀɢᴇ:-\n `/ytp` ᴏʀ `/play` sᴏɴɢ ɴᴀᴍᴇ | ʏᴛ ʟɪɴᴋ | ᴛɢ ᴀᴜᴅɪᴏ ғɪʟᴇ 🙋‍♀️"
+                "𝐔𝐬𝐚𝐠𝐞:-\n `/ytp` ᴏʀ `/play` 𝐒𝐨𝐧𝐠 𝐍𝐚𝐦𝐞 | 𝐘𝐓 𝐥𝐢𝐧𝐤 | 𝐓𝐆 𝐀𝐮𝐝𝐢𝐨 𝐟𝐢𝐥𝐞 🙋‍♀️"
             )
         await lel.edit("Processing Your Query....")
         query = message.text.split(None, 1)[1]
@@ -289,7 +289,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**ɴᴛɢ ɪᴢ ғᴏᴜɴᴅ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ǫᴜᴇʀʏ ɴᴀᴍᴇ ɴᴅ ᴛʀʏ ᴀɢᴀɪɴ🧚‍♀️.**"
+                "**🤷𝐧𝐭𝐠 𝐈 𝐠𝐨𝐭 𝐩𝐥𝐳 𝐜𝐡𝐞𝐜𝐤 𝐲𝐨𝐮𝐫 𝐪𝐮𝐞𝐫𝐲 𝐭𝐡𝐞𝐧 𝐭𝐫𝐲 𝐚𝐠𝐚𝐢𝐧🧚‍♀️.**"
             )
             print(str(e))
             return
@@ -298,11 +298,11 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="ᴛᴇᴀᴍ-sɪʟᴇɴᴛ🥀",
-                            url=f"https://t.me/SILENT_DEVS"),
+                            text="Enjoy🥀",
+                            url=f"https://t.me/"),
                     InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs👾",
-                            url=f"https://t.me/SILENT_BOTS"),
+                            text="Update👾",
+                            url=f"https://t.me/"),
                ],
                [
                    InlineKeyboardButton(text="Close Menu", callback_data="close_"),                   
@@ -312,7 +312,7 @@ async def play(_, message: Message):
     
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**ɢɪᴠᴇɴ ǫᴜᴀʀʏ ɪᴢ ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴛᴀᴛ ᴀʀᴇɴ'ᴛ ᴀʟʟᴏᴡ ᴛᴏ ᴘʟᴀʏ ᴅᴜᴇ ᴛᴏ ʜᴀᴠᴇʏ ᴜsᴀɢᴇ😕🤷‍♀️**"
+                f"**𝐒𝐨𝐫𝐫𝐲 𝐆𝐢𝐯𝐞𝐧 𝐐𝐮𝐞𝐫𝐲 𝐢𝐬 𝐧𝐨 𝐥𝐨𝐧𝐠𝐞𝐫 𝐭𝐡𝐚𝐧 {DURATION_LIMIT} 𝐒𝐨 𝐀𝐫𝐞𝐧'𝐭 𝐚𝐥𝐥𝐨𝐰 𝐭𝐨 𝐩𝐥𝐚𝐲 𝐝𝐮𝐞 𝐭𝐨 𝐡𝐞𝐚𝐯𝐲 𝐮𝐬𝐚𝐠𝐞😕🤷‍♀️**"
             )
             return
         requested_by = message.from_user.first_name
@@ -326,7 +326,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)      
         await message.reply_photo(
             photo="final.png",
-            caption="****ᴏᴋᴋ, ʏᴏᴜʀ sᴏɴɢ ɪᴢ ᴀᴅᴅᴇᴅ ɪɴ ᴛʜᴇ ǫᴜᴇᴜᴇ🥀💖 \n\nʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {} \nᴘᴏsɪᴛɪᴏɴ :-** {}**".format(usrid, position),
+            caption="****𝐍𝐨𝐰, 𝐘𝐨𝐮𝐫 𝐒𝐨𝐧𝐠 𝐢𝐬 𝐪𝐮𝐞𝐮𝐞𝐝 𝐢𝐧 𝐥𝐢𝐬𝐭🥀💖 \n\n𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲: {}𝐁𝐚𝐛𝐲 🥀 \n𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧:-** {}**".format(usrid, position),
             reply_markup=keyboard,
         )
         await message.delete()
@@ -345,7 +345,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**ɴᴏᴡ ɪ ᴍ ᴘʟᴀʏɪɴɢ ᴛʜᴇ ǫᴜᴇᴜᴇᴅ sᴏɴɢ💖🧚‍♀️.\n\nᴘʟᴀʏɪɴɢ ᴀᴛ🧚‍♀️ :- `{}`...**\nʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ: {}".format(
+            caption="**𝐍𝐨𝐰, 𝐈'𝐦 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐐𝐮𝐞𝐮𝐞𝐝 𝐒𝐨𝐧𝐠💖🧚‍♀️.\n\n𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐚𝐭🧚‍♀️ :- `{}`...**\n𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲 : {}𝐁𝐚𝐛𝐲🥀".format(
         message.chat.title, usrid
         ), )
         
